@@ -1,0 +1,195 @@
+/* stylelint-disable */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Italic";
+  src: url("../fonts/../fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+body {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  font-size: 11px;
+  font-weight: 400;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.btn-primary {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background-color: transparent;
+  -webkit-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.btn-primary::before, .btn-primary::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+  left: 0;
+  z-index: -1;
+  height: 0;
+  width: 100%;
+}
+.btn-primary::before {
+  bottom: 0;
+  border: 1px solid #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+.btn-primary::after {
+  top: 0;
+  height: 0;
+  border-right: 1px solid #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  color: #23293C;
+  -webkit-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.btn-primary:hover::before, .btn-primary:hover::after, .btn-primary:focus::before, .btn-primary:focus::after {
+  height: 100%;
+}
+.btn-primary:hover::after, .btn-primary:focus::after {
+  background-color: #fff;
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.btn-primary:hover::before, .btn-primary:focus::before {
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.header__row {
+  padding-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #fff;
+}
+.header__link {
+  font-size: 14px;
+}
+
+.sales-label {
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  color: #fff;
+}
+
+.index-video {
+  height: 100vh;
+  width: 100%;
+  background-color: #23293C;
+}
+
+.stock {
+  background-color: #23293C;
+}
+.stock__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.stock__content {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+.stock__content i {
+  font-family: "Roboto-Italic", "Roboto", sans-serif;
+  font-weight: 700;
+  background: #83da51; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#83da51), to(#f83f3c));
+  background: -o-linear-gradient(left, #83da51, #f83f3c);
+  background: linear-gradient(to right, #83da51, #f83f3c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stock__countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.stock__countdown .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.stock__countdown .count span {
+  display: block;
+  width: 36px;
+  padding: 5px 0;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+}
+.stock__countdown .val {
+  margin-top: 5px;
+  color: #fff;
+  font-weight: 700;
+}
+.stock-countdown__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
