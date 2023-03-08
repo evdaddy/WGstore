@@ -7,10 +7,10 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WGStore</title>
-  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
-  <script defer src="js/main.js"></script>
+  <link href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/vendor.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <div class="header__row">
         <a href="/catalog" class="header__link btn btn-primary">Catalog</a>
         <div class="header__logo">
-          <img src="/img/logo.svg" alt="WGStore Logo">
+          <img src="./img/logo.svg" alt="WGStore Logo">
         </div>
         <a href="/basket" class="header__link btn btn-primary">Basket</a>
     </div>
@@ -30,7 +30,7 @@
 </header>
 
     <section class="index-video" id="video">
-    <video src="/index-back.mp4" preload="auto" autoplay loop muted></video>
+    <video src="./index-back.mp4" preload="auto" autoplay loop muted></video>
 </section>
 
     <div class="stock" id="stock">
@@ -61,7 +61,7 @@
 
     <section class="preview" id="preview">
     <div class="preview__row">
-        <div class="preview__block" style="background-image: url(/img/preview1.webp);">
+        <div class="preview__block" style="background-image: url('./img/preview1.webp');">
             <div class="preview__container">
                 <div class="preview__content">
                     <h2 class="title">Eiger Extreme</h2>
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div class="preview__block" style="background-image: url(/img/preview2.webp);"></div>
+        <div class="preview__block" style="background-image: url('./img/preview2.webp');"></div>
     </div>
 </section>
 
@@ -78,13 +78,13 @@
     <div class="container">
         <div class="catalog-section__row">
             <div class="catalog-section__col">
-                <a href="/catalog/men" class="catalog-section__link" style="background-image: url(/img/men.webp);">
+                <a href="/catalog/men" class="catalog-section__link" style="background-image: url('./img/men.webp');">
                     <div class="catalog-section__name">Men</div>
                     <div class="catalog-section__description">Fashion clothes for men</div>
                 </a>
             </div>
             <div class="catalog-section__col">
-                <a href="/catalog/women" class="catalog-section__link" style="background-image: url(/img/women.webp);">
+                <a href="/catalog/women" class="catalog-section__link" style="background-image: url('./img/women.webp');">
                     <div class="catalog-section__name">Women</div>
                     <div class="catalog-section__description">Fashion clothes for women</div>
                 </a>

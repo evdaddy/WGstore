@@ -38,34 +38,6 @@ window.pluralFormat = (num, one, two, many) => {
   const notOne = endOnTwo ? two : many;
   return endOnOne ? one : notOne;
 };
-window.getCookie = name => {
-  let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-  return matches ? decodeURIComponent(matches[1]) : undefined;
-};
-window.setCookie = function (name, value) {
-  let options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  options = {
-    path: '/',
-    ...options
-  };
-  if (options.expires instanceof Date) {
-    options.expires = options.expires.toUTCString();
-  }
-  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-  for (let optionKey in options) {
-    updatedCookie += "; " + optionKey;
-    let optionValue = options[optionKey];
-    if (optionValue !== true) {
-      updatedCookie += "=" + optionValue;
-    }
-  }
-  document.cookie = updatedCookie;
-};
-window.deleteCookie = name => {
-  setCookie(name, "", {
-    'max-age': -1
-  });
-};
 
 /***/ }),
 
@@ -78,17 +50,18 @@ window.deleteCookie = name => {
 document.addEventListener("DOMContentLoaded", () => {
   const countdownEl = document.querySelector('[data-countdown]');
   if (countdownEl) {
-    if (window.getCookie('countdown') === undefined || Date.parse(new Date()) > Date.parse(window.getCookie('countdown'))) {
+    const storage = window.localStorage;
+    if (!storage.getItem('countdown') || Date.parse(new Date()) > Date.parse(storage.getItem('countdown'))) {
       const currentDate = new Date(),
         targetDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + Number(countdownEl.dataset.countdown), currentDate.getHours(), currentDate.getMinutes(), currentDate.getSeconds());
-      document.cookie = `countdown=${targetDate}; path=/; expires=${targetDate}`;
+      storage.setItem('countdown', targetDate);
     }
     setCountdown();
     setInterval(() => {
       setCountdown();
     }, 1000);
     function setCountdown() {
-      const countdownDate = window.countdown(Date.parse(window.getCookie('countdown'))),
+      const countdownDate = window.countdown(Date.parse(storage.getItem('countdown'))),
         days = Number(countdownDate.days),
         hours = Number(countdownDate.hours),
         minutes = Number(countdownDate.minutes),
