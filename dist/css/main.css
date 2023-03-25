@@ -50,6 +50,13 @@ img {
   opacity: 0.7;
 }
 
+.small-title {
+  font-size: 40px;
+  color: #000;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 .auth-form {
   width: 400px;
   padding: 20px;
@@ -550,10 +557,105 @@ img {
   align-items: flex-end;
 }
 .beast-seller__col:first-child {
+  height: 100%;
   width: 70%;
+  background-image: url("../img/beast-sealer.jpg");
+  background-size: cover;
+  position: relative;
+}
+.beast-seller__col:first-child::after {
+  content: "";
+  display: block;
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  inset: 0;
+}
+.beast-seller__info {
+  margin-bottom: 20%;
+  padding-left: 30px;
+}
+.beast-seller__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.beast-seller__buttons .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.beast-seller__buttons .btn:first-child {
+  margin-bottom: 10px;
 }
 
-.product-card {
-  width: 25%;
+.product-section {
+  padding: 50px 0;
+}
+.product-section__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.product-section-top__btn {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+}
+.product-section-top__btn svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+  color: #23293C;
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+.product-section-top__btn.-prev {
+  margin-right: 10px;
+}
+.product-section-top__btn.-prev svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.product-section-top__btn:hover svg {
+  color: #E00B25;
+}
+
+.product-card__top {
+  padding: 15px;
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+}
+.product-card__picture {
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+.product-card__info {
+  padding: 0 10px;
+}
+.product-card__name {
+  font-size: 18px;
+  color: #23293C;
+  margin-bottom: 5px;
+}
+.product-card__price {
+  font-size: 16px;
+  color: #23293C;
 }
 /*# sourceMappingURL=main.css.map */
