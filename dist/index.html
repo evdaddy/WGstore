@@ -35,7 +35,7 @@
 
     <div class="stock" id="stock">
     <div class="container">
-        <div class="stock__row">
+        <div class="stock__row" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="800">
             <div class="stock__content">Специальное предложение от <i>WGStore</i>, успей купить!<br> До конца акции осталось:</div>
             <div class="stock__countdown" data-countdown="5.5">
                 <div class="stock-countdown__value" data-countdown-value="days">
@@ -63,7 +63,7 @@
     <div class="preview__row">
         <div class="preview__block" style="background-image: url('./img/preview1.webp');">
             <div class="preview__container">
-                <div class="preview__content">
+                <div class="preview__content" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
                     <h2 class="title">Eiger Extreme</h2>
                     <p class="description">For living life on the edge. For experiencing all the extremes. For limits there to be pushed. When your equipment must be function-first, Eiger Extreme is made for you.</p>
                     <button type="button" class="btn btn-outline">View Collection</button>
@@ -77,13 +77,13 @@
     <div class="catalog-section">
     <div class="container">
         <div class="catalog-section__row">
-            <div class="catalog-section__col">
+            <div class="catalog-section__col" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                 <a href="/catalog/men" class="catalog-section__link" style="background-image: url('./img/men.webp');">
                     <div class="catalog-section__name">Men</div>
                     <div class="catalog-section__description">Fashion clothes for men</div>
                 </a>
             </div>
-            <div class="catalog-section__col">
+            <div class="catalog-section__col" data-aos="fade-left" data-aos-delay="200" data-aos-duration="800">
                 <a href="/catalog/women" class="catalog-section__link" style="background-image: url('./img/women.webp');">
                     <div class="catalog-section__name">Women</div>
                     <div class="catalog-section__description">Fashion clothes for women</div>
@@ -92,6 +92,51 @@
         </div>
     </div>
 </div>
+
+    <section class="beast-seller" id="beast-seller">
+    <div class="beast-seller__row">
+        <div class="beast-seller__col"></div>
+        <div class="beast-seller__col">
+            <div class="container">
+                <h2 class="title">Bestsellers</h2>
+                <p class="description">Our gear is known for top performance in the mountains. Now discover which kit is performing just as well in-store this winter.</p>
+                <div class="beast-seller__buttons">
+                    <a href="" class="btn btn-primary">Discover women’s bestsellers</a>
+                    <a href="" class="btn btn-primary">Discover men’s bestsellers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="product-section">
+    <div class="container">
+        <div class="product-section__top product-section-top">
+            <h2 class="small-title">Products</h2>
+            <div class="product-row-top__control">
+                <button type="button" class="product-row-top__btn -prev">Назад</button>
+                <button type="button" class="product-row-top__btn -next">Вперёд</button>
+            </div>
+        </div>
+        <div class="product-section__container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+    <div class="product-card">
+        <div class="product-card__top">
+            <img class="product-card__picture" src="./img/product.jpg" alt="test1">
+        </div>
+        <div class="product-card__info">
+            <div class="product-card__name">test1</div>
+            <span class="product-card__price">900 000</span>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 
 </html>
