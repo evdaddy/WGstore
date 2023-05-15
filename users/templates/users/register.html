@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WGStore</title>
+  <link href="{% static 'fonts/Roboto-Regular.woff2' %}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <script defer src="{% static 'js/main.js' %}"></script>
+</head>
+
+<body>
+    <div class="form__wrapper">
+        <div class="form__logo">
+            <img src="{% static 'img/logo.svg' %}" alt="WGStore Logo">
+        </div>
+        <form action="/static" class="auth-form" id="signin-form">
+            <h1 class="form__title">Register</h1>
+            <div class="form-group">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="currentColor" fill="none">
+                    <circle cx="32" cy="18.14" r="11.14"/><path d="M54.55,56.85A22.55,22.55,0,0,0,32,34.3h0A22.55,22.55,0,0,0,9.45,56.85Z"/>
+                </svg>
+                <input class="form-control" type="text" name="signin-name" id="signin-name" placeholder=" ">
+                <label class="form-label" for="signin-name">Login</label>
+            </div>
+            <div class="form-group">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6.5C3 14.5081 9.49187 21 17.5 21C18.166 21 18.8216 20.9551 19.4637 20.8682C20.3747 20.7448 21 19.9292 21 19.01V16.4415C21 15.5807 20.4491 14.8164 19.6325 14.5442L16.4841 13.4947C15.6836 13.2279 14.8252 13.699 14.6206 14.5177C14.3475 15.6102 12.987 15.987 12.1907 15.1907L8.80926 11.8093C8.01301 11.013 8.38984 9.65254 9.48229 9.37943C10.301 9.17476 10.7721 8.31644 10.5053 7.51586L9.45585 4.36754C9.18362 3.55086 8.41934 3 7.55848 3H4.99004C4.0708 3 3.25518 3.62533 3.13185 4.53627C3.0449 5.17845 3 5.83398 3 6.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <input class="form-control" type="tel" name="signin-phone" id="signin-phone" placeholder=" ">
+                <label class="form-label" for="signin-phone">Phone</label>
+            </div>
+            <div class="form-group">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Iconly/Curved/Password">
+                        <g id="Password">
+                            <path id="Stroke 1" fill-rule="evenodd" clip-rule="evenodd" d="M10.6887 11.9999C10.6887 13.0229 9.85974 13.8519 8.83674 13.8519C7.81374 13.8519 6.98474 13.0229 6.98474 11.9999C6.98474 10.9769 7.81374 10.1479 8.83674 10.1479H8.83974C9.86174 10.1489 10.6887 10.9779 10.6887 11.9999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Stroke 3" d="M10.6918 12H17.0098V13.852" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Stroke 5" d="M14.182 13.852V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Stroke 7" fill-rule="evenodd" clip-rule="evenodd" d="M2.74988 12C2.74988 5.063 5.06288 2.75 11.9999 2.75C18.9369 2.75 21.2499 5.063 21.2499 12C21.2499 18.937 18.9369 21.25 11.9999 21.25C5.06288 21.25 2.74988 18.937 2.74988 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </g>
+                </svg>
+                <input class="form-control" type="password" name="signin-phone" id="signin-phone" placeholder=" ">
+                <label class="form-label" for="signin-phone">Password</label>
+            </div>
+            <div class="form-group btn-group">
+                <button type="submit" class="btn btn-outline btn-submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
