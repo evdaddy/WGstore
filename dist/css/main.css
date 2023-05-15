@@ -305,8 +305,11 @@ img {
   width: 100%;
   z-index: 2;
 }
+.header.-bg {
+  background-color: #23293C;
+}
 .header__row {
-  padding-top: 25px;
+  padding: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
