@@ -24,11 +24,12 @@
             {% csrf_token %}
             <h1 class="form__title">Signin</h1>
             <div class="form-group">
+
                 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="currentColor" fill="none">
                     <circle cx="32" cy="18.14" r="11.14"/><path d="M54.55,56.85A22.55,22.55,0,0,0,32,34.3h0A22.55,22.55,0,0,0,9.45,56.85Z"/>
                 </svg>
-                <input class="form-control" type="text" name="signin-name" id="signin-name" placeholder=" ">
-                <label class="form-label" for="signin-name">Login</label>
+                {{ form.username }}
+                <label class="form-label" for="{{ form.username.id_for_label }}">Login</label>
             </div>
             <div class="form-group">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,8 +42,8 @@
                         </g>
                     </g>
                 </svg>
-                <input class="form-control" type="password" name="signin-password" id="signin-password" placeholder=" ">
-                <label class="form-label" for="signin-password">Password</label>
+                {{ form.password }}
+                <label class="form-label" for="{{ form.password.id_for_label }}">Password</label>
             </div>
             <div class="form-group btn-group">
                 <button type="submit" class="btn btn-outline btn-submit">Отправить</button>
