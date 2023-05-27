@@ -1,11 +1,6 @@
-/node_modules
-/src
+/frontend
 .htmlhintrc
 .stylelintrc.json
-gulpfile.js
-package-lock.json
-package.json
-.Rproj.user
 .DS_Store
 .idea
 __pycache__
@@ -13,3 +8,4 @@ __pycache__
 /Makefile
 /make.bat
 /source
+node_modules
