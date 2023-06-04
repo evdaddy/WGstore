@@ -29,7 +29,7 @@
     <header class="header -bg">
         <div class="container">
             <div class="header__row">
-                <a href="{% url 'products' %}" class="header__link btn btn-primary">Catalog</a>
+                <a href="{% url 'products:index' %}" class="header__link btn btn-primary">Catalog</a>
                 <a href="/" class="header__logo">
                     <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
                 </a>
@@ -40,7 +40,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                            <a class="dropdown-item" href="{% url 'users:profile' %}">Profile</a>
                         </li>
                         <li><a class="dropdown-item" href="../orders/orders.html">Orders</a></li>
                         {% if user.is_superuser or user.is_stuff %}
@@ -63,10 +63,10 @@
     <!-- Page Content -->
     <div class="catalog">
         <div class="container">
-            <h1 class="title catalog__title">Store</h1>
+            <h1 class="title catalog__title">Categories</h1>
             <div class="catalog__filter">
                 {% for category in categories %}
-                    <a href="#" class="btn btn-outline">{{ category.name }}</a>
+                    <a href="{% url 'products:category' category.id %}" class="btn btn-outline">{{ category.name }}</a>
                 {% endfor %}
             </div>
             <div class="catalog__slider swiper">

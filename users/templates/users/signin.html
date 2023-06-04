@@ -37,7 +37,7 @@
                 </button>
             </div>
         {% endif %}
-        <form action="{% url 'login' %}" method="post" class="form" id="signin-form">
+        <form action="{% url 'users:login' %}" method="post" class="form" id="signin-form">
             {% csrf_token %}
             <h1 class="form__title">Signin</h1>
             <div class="form-group">
@@ -51,7 +51,7 @@
             <div class="form-group btn-group">
                 <button type="submit" class="btn btn-outline btn-submit">Send</button>
             </div>
-            <a href="/register" class="form__link">Dont have account?</a>
+            <a href="{% url 'users:register' %}" class="form__link">Dont have account?</a>
         </form>
     </div>
 

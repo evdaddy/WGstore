@@ -20,11 +20,11 @@
         <div class="container">
             <div class="sales-label">Free shipping from 50 EUR</div>
             <div class="header__row">
-                <a href="{% url 'products' %}" class="header__link btn btn-primary">Catalog</a>
+                <a href="{% url 'products:index' %}" class="header__link btn btn-primary">Catalog</a>
                 <a href="/" class="header__logo">
                     <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
                 </a>
-                <a href="/profile" class="header__link btn btn-primary">Profile</a>
+                <a href="{% url 'users:profile' %}" class="header__link btn btn-primary">Profile</a>
             </div>
         </div>
     </header>
@@ -81,14 +81,14 @@
         <div class="container">
             <div class="catalog-section__row">
                 <div class="catalog-section__col">
-                    <a href="/catalog/men" class="catalog-section__link"
+                    <a href="{% url 'products:index' %}" class="catalog-section__link"
                         style="background-image: url('{% static 'dist/img/men.webp' %}');">
                         <div class="catalog-section__name">Men</div>
                         <div class="catalog-section__description">Fashion clothes for men</div>
                     </a>
                 </div>
                 <div class="catalog-section__col">
-                    <a href="/catalog/women" class="catalog-section__link"
+                    <a href="{% url 'products:index' %}" class="catalog-section__link"
                         style="background-image: url('{% static 'dist/img/women.webp' %}');">
                         <div class="catalog-section__name">Women</div>
                         <div class="catalog-section__description">Fashion clothes for women</div>
@@ -128,6 +128,7 @@
             <div class="product-section__container">
                 <div class="swiper">
                     <div class="swiper-wrapper">
+                        {% for product in products %}
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">
@@ -137,8 +138,12 @@
                                     <div class="product-card__name">test1</div>
                                     <span class="product-card__price">900 000р</span>
                                 </div>
+                                <div class="product-card__buttons">
+                                    <button type="button" class="btn btn-outline">Отправить в корзину</button>
+                                </div>
                             </div>
                         </div>
+                        {% endfor %}
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">

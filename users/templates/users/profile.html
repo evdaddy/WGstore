@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}">Каталог <i class="fas fa-shopping-bag"></i> </a>
+                    <a class="nav-link" href="{% url 'products:index' %}">Каталог <i class="fas fa-shopping-bag"></i> </a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
@@ -37,9 +37,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="{% url 'profile' %}">Профиль</a>
+                            <a class="dropdown-item" href="{% url 'users:profile' %}">Профиль</a>
                         </li>
-                        <li><a class="dropdown-item" href="../orders/orders.html">Заказы</a></li>
+                        <li><a class="dropdown-item" href="{% url 'users:profile' %}">Заказы</a></li>
                         {% if user.is_superuser or user.is_stuff %}
                         <li><a class="dropdown-item" href="#">Админ-панель</a></li>
                         {% endif %}
@@ -47,7 +47,7 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{% url 'logout' %}">
+                            <a class="dropdown-item" href="{% url 'users:logout' %}">
                                 Выйти
                             </a>
                         </li>
@@ -56,7 +56,7 @@
 
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Войти <i class="fas fa-sign-in-alt"></i></a>
+                    <a class="nav-link" href="{% url 'users:login' %}">Войти <i class="fas fa-sign-in-alt"></i></a>
                 </li>
                 {% endif %}
             </ul>
@@ -73,7 +73,7 @@
                      src="{% if user.image %} {{ user.image.url }} {% else %} {% static 'vendor/img/users/default_avatar.jpg' %} {% endif %}"
                      class="img-thumbnail">
             </div>
-            <form action="{% url 'profile' %}" method='post', enctype="multipart/form-data">
+            <form action="{% url 'users:profile' %}" method='post' enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="col-lg-6">
