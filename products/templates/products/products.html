@@ -42,7 +42,7 @@
                         <li>
                             <a class="dropdown-item" href="{% url 'users:profile' %}">Profile</a>
                         </li>
-                        <li><a class="dropdown-item" href="../orders/orders.html">Orders</a></li>
+                        <li><a class="dropdown-item" href="{% url 'users:profile' %}">Orders</a></li>
                         {% if user.is_superuser or user.is_stuff %}
                             <li><a class="dropdown-item" href="#">Admin-panel</a></li>
                         {% endif %}
@@ -50,9 +50,9 @@
                             <hr class="dropdown-divider">
                         </li>
                         {% if user.is_superuser or user.is_stuff %}
-                            <li><a class="dropdown-item" href="/logout">Exit</a></li>
+                            <li><a class="dropdown-item" href="{% url 'users:logout'%}">Exit</a></li>
                         {% else %}
-                            <li><a class="dropdown-item" href="/login">Login</a></li>
+                            <li><a class="dropdown-item" href="{% url 'users:login' %}">Login</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -111,7 +111,7 @@
                             <span class="product-card__price">{{ product.price }} р</span>
                         </div>
                         <div class="product-card__buttons">
-                            <button type="button" class="btn btn-outline">Отправить в корзину</button>
+                            <a class="btn btn-outline" href="{% url 'products:basket_add' product.id %}">Отправить в корзину</a>
                         </div>
                     </div>
                 </div>
