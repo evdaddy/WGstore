@@ -207,17 +207,17 @@ p {
   font-size: 0;
 }
 .form-control:not(:-moz-placeholder-shown) + .form-label {
-  top: -8px;
+  top: -15px;
   font-size: 11px;
   opacity: 1;
 }
 .form-control:not(:-ms-input-placeholder) + .form-label {
-  top: -8px;
+  top: -15px;
   font-size: 11px;
   opacity: 1;
 }
 .form-control:not(:placeholder-shown) + .form-label, .form-control:focus + .form-label {
-  top: -8px;
+  top: -15px;
   font-size: 11px;
   opacity: 1;
 }
@@ -1016,5 +1016,27 @@ p {
 }
 .catalog .swiper-button.-prev {
   left: 10px;
+}
+
+.profile {
+  margin-top: 95px;
+}
+.profile__img {
+  max-width: 90px;
+  display: block;
+  margin: 0 auto 20px;
+}
+.profile .form-control {
+  color: #000;
+  border-color: #000;
+}
+.profile .form-control[type=number] {
+  border-bottom: 0;
+  background: #f8f9fa;
+  -webkit-box-shadow: 7px 7px 18px #cecfd0, -7px -7px 18px #ffffff;
+  box-shadow: 7px 7px 18px #cecfd0, -7px -7px 18px #ffffff;
+}
+.profile .form-label {
+  color: #000;
 }
 /*# sourceMappingURL=main.css.map */
