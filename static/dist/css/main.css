@@ -253,6 +253,7 @@ p {
   padding: 10px 15px;
   outline: none;
   border: none;
+  border-radius: 0 !important;
   cursor: pointer;
 }
 .btn-primary {
@@ -373,6 +374,65 @@ p {
   -webkit-transform: scale(0.1, 1);
   -ms-transform: scale(0.1, 1);
   transform: scale(0.1, 1);
+}
+.btn-circle {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+.btn-circle span:not(:nth-child(6)) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 33px;
+  width: 33px;
+  background-color: #28a745;
+  border-radius: 50%;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+.btn-circle span:nth-child(6) {
+  position: relative;
+  color: #fff;
+}
+.btn-circle span:nth-child(1) {
+  -webkit-transform: translate(-3.3em, -4.5em);
+  -ms-transform: translate(-3.3em, -4.5em);
+  transform: translate(-3.3em, -4.5em);
+}
+.btn-circle span:nth-child(2) {
+  -webkit-transform: translate(-6em, 1.6em);
+  -ms-transform: translate(-6em, 1.6em);
+  transform: translate(-6em, 1.6em);
+}
+.btn-circle span:nth-child(3) {
+  -webkit-transform: translate(-0.2em, 1.8em);
+  -ms-transform: translate(-0.2em, 1.8em);
+  transform: translate(-0.2em, 1.8em);
+}
+.btn-circle span:nth-child(4) {
+  -webkit-transform: translate(3.5em, 1.8em);
+  -ms-transform: translate(3.5em, 1.8em);
+  transform: translate(3.5em, 1.8em);
+}
+.btn-circle span:nth-child(5) {
+  -webkit-transform: translate(3.5em, -4.6em);
+  -ms-transform: translate(3.5em, -4.6em);
+  transform: translate(3.5em, -4.6em);
+}
+.btn-circle:hover span:not(:nth-child(6)) {
+  -webkit-transform: translate(-50%, -50%) scale(4);
+  -ms-transform: translate(-50%, -50%) scale(4);
+  transform: translate(-50%, -50%) scale(4);
+  -webkit-transition: 1.5s ease;
+  -o-transition: 1.5s ease;
+  transition: 1.5s ease;
 }
 
 .notify {
@@ -1031,7 +1091,6 @@ p {
   border: none;
   padding: 1rem;
   font-size: 1rem;
-  border-radius: 1rem;
   color: #000;
   -webkit-box-shadow: 0 0.4rem #dfd9d9;
   box-shadow: 0 0.4rem #dfd9d9;
