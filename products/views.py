@@ -10,11 +10,11 @@ def index(request):
     return render(request, 'products/index.html')
 
 
-def products(request, category_id=None, page=1):
+def products(request, category_id=None, page_number=1):
 
     products = Product.objects.filter(category_id=category_id) if category_id else Product.objects.all()
     paginator = Paginator(products, per_page=4)
-    products_paginator = paginator.page(page)
+    products_paginator = paginator.page(page_number)
 
     context = {'title': 'WGStore - Каталог',
                'products': products_paginator,
@@ -32,7 +32,7 @@ def basket_add(request, product_id):
         Basket.objects.create(user=request.user, product=product, quantity=1)
     else:
         basket = baskets.first()
-        basket.quantity = 1
+        basket.quantity += 1
         basket.save()
 
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
