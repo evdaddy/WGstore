@@ -191,6 +191,66 @@
         </div>
     </div>
 </section>
+
+    <section class="subscribe">
+    <div class="container">
+        <h2 class="small-title subscribe__title">Подпишитесь на новостную рассылку!</h2>
+        <p class="description subscribe__description">Получайте последние новости магазина и будьте вкурсе всех актуальных акций!</p>
+        <form class="form subscribe__form" action="/">
+            <div class="form-group">
+                <input placeholder=" " 
+                        type="email" 
+                        class="form-control"
+                        required minlength="2"
+                        id="subscribe-email" 
+                        name="subscribe-email">
+                <label for="subscribe-email" class="form-label">Введите почту</label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline w-100">Подписаться</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <a href="/" class="footer__logo">
+                <img src="./img/logo.svg" alt="WGStore Logo">
+            </a>
+            <p class="footer__description">@WGStore все правава защищены</p>
+        </div>
+    </div>
+</footer>
+
+<div class="templates">
+    <template id="notify">
+        <div class="notify -success">
+            <div class="notify__status">
+                <div class="circle"></div>
+                <div class="icon">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <g>
+                            <path fill="currentColor" d="M4,9C3.4,9,3,8.6,3,8V6c0-1.7,1.3-3,3-3h2c0.6,0,1,0.4,1,1S8.6,5,8,5H6C5.4,5,5,5.4,5,6v2C5,8.6,4.6,9,4,9z"/>
+                            <path fill="currentColor" d="M8,21H6c-1.7,0-3-1.3-3-3v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2c0,0.6,0.4,1,1,1h2c0.6,0,1,0.4,1,1S8.6,21,8,21z"/>
+                            <path fill="currentColor" d="M20,9c-0.6,0-1-0.4-1-1V6c0-0.6-0.4-1-1-1h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c1.7,0,3,1.3,3,3v2C21,8.6,20.6,9,20,9z"/>
+                            <path fill="currentColor" d="M18,21h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1-0.4,1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C21,19.7,19.7,21,18,21z"/>
+                            <path fill="currentColor" d="M9,11c-0.6,0-1-0.4-1-1s0.4-1,1-1h0c0.6,0,1,0.4,1,1S9.6,11,9,11z"/>
+                            <path fill="currentColor" d="M15,11c-0.6,0-1-0.4-1-1s0.4-1,1-1h0c0.6,0,1,0.4,1,1S15.6,11,15,11z"/>
+                            <path fill="currentColor" d="M12,17c-1.2,0-2.3-0.5-3.2-1.3c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0c1,1,2.6,1,3.5,0c0.4-0.4,1-0.4,1.4,0
+                            c0.4,0.4,0.4,1,0,1.4c0,0-0.1,0.1-0.1,0.1C14.3,16.6,13.1,17,12,17z"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="notify__heading">Успех!</div>
+            <div class="notify__message">Теперь вы подписаны на рассылку!</div>
+            <button class="notify__button btn" type="button" data-fancybox-close>Закрыть</button>
+        </div>
+    </template>
+</div>
 </body>
 
 </html>
