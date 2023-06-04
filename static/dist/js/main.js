@@ -112,28 +112,50 @@ document.addEventListener("DOMContentLoaded", () => {
       countdownHours.querySelector('.count').innerHTML = `<span>${Math.floor(hours / 10)}</span><span>${Math.floor(hours % 10)}</span>`;
       countdownMinutes.querySelector('.count').innerHTML = `<span>${Math.floor(minutes / 10)}</span><span>${Math.floor(minutes % 10)}</span>`;
       countdownSeconds.querySelector('.count').innerHTML = `<span>${Math.floor(seconds / 10)}</span><span>${Math.floor(seconds % 10)}</span>`;
-      countdownDays.querySelector('.val').innerHTML = window.pluralFormat(days, 'день', 'дня', 'дней');
-      countdownHours.querySelector('.val').innerHTML = window.pluralFormat(hours, 'час', 'часа', 'часов');
-      countdownMinutes.querySelector('.val').innerHTML = window.pluralFormat(minutes, 'минута', 'минуты', 'минут');
-      countdownSeconds.querySelector('.val').innerHTML = window.pluralFormat(seconds, 'секунда', 'секунды', 'секунд');
+      countdownDays.querySelector('.val').innerHTML = window.pluralFormat(days, 'days', 'days', 'days');
+      countdownHours.querySelector('.val').innerHTML = window.pluralFormat(hours, 'hours', 'hours', 'hours');
+      countdownMinutes.querySelector('.val').innerHTML = window.pluralFormat(minutes, 'minutes', 'minutes', 'minutes');
+      countdownSeconds.querySelector('.val').innerHTML = window.pluralFormat(seconds, 'seconds', 'seconds', 'seconds');
     }
   }
 
   // Product Gallery
-  const productContainer = document.querySelector('.product-section__container');
+  const productContainer = document.querySelector('.product-section');
   if (productContainer) {
     const productSwiper = productContainer.querySelector('.swiper');
+    const next = productContainer.querySelector('.product-section-top__btn.-next');
+    const prev = productContainer.querySelector('.product-section-top__btn.-prev');
     const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](productSwiper, {
+      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation],
       slidesPerView: 4,
       spaceBetween: 20,
-      on: {
-        init: function () {
-          document.querySelectorAll('.product-section-top__btn').forEach(btn => {
-            btn.addEventListener('click', () => btn.classList.contains('-prev') ? swiper.slidePrev() : swiper.slideNext());
-          });
-        }
+      navigation: {
+        prevEl: prev,
+        nextEl: next
       }
     });
+  }
+
+  // Catalog Slider
+  const catalogSlider = document.querySelector('.catalog__slider');
+  if (catalogSlider) {
+    const next = catalogSlider.querySelector('.swiper-button.-next');
+    const prev = catalogSlider.querySelector('.swiper-button.-prev');
+    const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](catalogSlider, {
+      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay],
+      slidesPerView: 1,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: next,
+        prevEl: prev
+      }
+    });
+    swiper.autoplay.start();
   }
 
   // Form Validation
@@ -148,21 +170,23 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   forms.forEach(form => {
     const pristine = new (pristinejs__WEBPACK_IMPORTED_MODULE_1___default())(form, pristineConfig);
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const valid = pristine.validate();
-      if (valid) {
-        form.reset();
-        form.querySelectorAll('.form-group').forEach(child => child.classList.remove('success'));
-        const notify = document.querySelector('#notify').content.cloneNode(true);
-        const div = document.createElement('div');
-        div.append(notify);
-        new _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox([{
-          src: div,
-          type: "html"
-        }]);
-      }
-    });
+    if (form.classList.contains('subscribe__form')) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const valid = pristine.validate();
+        if (valid) {
+          form.reset();
+          form.querySelectorAll('.form-group').forEach(child => child.classList.remove('success'));
+          const notify = document.querySelector('#notify').content.cloneNode(true);
+          const div = document.createElement('div');
+          div.append(notify);
+          new _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox([{
+            src: div,
+            type: "html"
+          }]);
+        }
+      });
+    }
   });
 });
 

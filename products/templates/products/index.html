@@ -24,20 +24,20 @@
                 <a href="/" class="header__logo">
                     <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
                 </a>
-                <a href="/basket" class="header__link btn btn-primary">Basket</a>
+                <a href="/profile" class="header__link btn btn-primary">Profile</a>
             </div>
         </div>
     </header>
 
     <section class="index-video" id="video">
-        <video src="{% static '/index-back.mp4' %}" preload="auto" autoplay loop muted></video>
+        <video src="{% static 'dist/index-back.mp4' %}" preload="auto" autoplay loop muted></video>
     </section>
 
     <div class="stock" id="stock">
         <div class="container">
             <div class="stock__row">
-                <div class="stock__content">Специальное предложение от <i>WGStore</i>, успей купить!<br> До конца акции
-                    осталось:</div>
+                <div class="stock__content">Special offer from <i>WGStore</i>, have time to buy!<br> 
+                    There is still until the end of the promotion:</div>
                 <div class="stock__countdown" data-countdown="5.5">
                     <div class="stock-countdown__value" data-countdown-value="days">
                         <div class="count"></div>
@@ -191,17 +191,16 @@
 
     <section class="subscribe">
         <div class="container">
-            <h2 class="small-title subscribe__title">Подпишитесь на новостную рассылку!</h2>
-            <p class="description subscribe__description">Получайте последние новости магазина и будьте вкурсе всех
-                актуальных акций!</p>
+            <h2 class="small-title subscribe__title">Subscribe to the newsletter!</h2>
+            <p class="description subscribe__description">Get the latest store news and be aware of all current promotions!</p>
             <form class="form subscribe__form" action="/">
                 <div class="form-group">
                     <input placeholder=" " type="email" class="form-control" required minlength="2" id="subscribe-email"
                         name="subscribe-email">
-                    <label for="subscribe-email" class="form-label">Введите почту</label>
+                    <label for="subscribe-email" class="form-label">Enter email</label>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-outline w-100">Подписаться</button>
+                    <button type="submit" class="btn btn-outline w-100">Subscribe!</button>
                 </div>
             </form>
         </div>
@@ -213,7 +212,7 @@
                 <a href="/" class="footer__logo">
                     <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
                 </a>
-                <p class="footer__description">@WGStore все правава защищены</p>
+                <p class="footer__description">@WGStore all rights reserved</p>
             </div>
         </div>
     </footer>
