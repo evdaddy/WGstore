@@ -6,26 +6,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'dist/favicon.ico' %}" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WGStore</title>
-    <link href="{% static '/fonts/Roboto-Regular.woff2' %}" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <script defer src="{% static 'js/main.js' %}"></script>
+    <link href="{% static 'dist/fonts/Roboto-Regular.woff2' %}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{% static 'dist/css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'dist/css/main.css' %}">
+    <script defer src="{% static 'dist/js/main.js' %}"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-
             <div class="sales-label">Free shipping from 50 EUR</div>
-
             <div class="header__row">
                 <a href="{% url 'products' %}" class="header__link btn btn-primary">Catalog</a>
-                <div class="header__logo">
-                    <img src="{% static '/img/logo.svg' %}" alt="WGStore Logo">
-                </div>
+                <a href="/" class="header__logo">
+                    <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
+                </a>
                 <a href="/basket" class="header__link btn btn-primary">Basket</a>
             </div>
         </div>
@@ -64,7 +62,7 @@
 
     <section class="preview" id="preview">
         <div class="preview__row">
-            <div class="preview__block" style="background-image: url('{% static '/img/preview1.webp' %}');">
+            <div class="preview__block" style="background-image: url('{% static 'dist/img/preview1.webp' %}');">
                 <div class="preview__container">
                     <div class="preview__content">
                         <h2 class="title">Eiger Extreme</h2>
@@ -75,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="preview__block" style="background-image: url('{% static '/img/preview2.webp' %}');"></div>
+            <div class="preview__block" style="background-image: url('{% static 'dist/img/preview2.webp' %}');"></div>
         </div>
     </section>
 
@@ -84,14 +82,14 @@
             <div class="catalog-section__row">
                 <div class="catalog-section__col">
                     <a href="/catalog/men" class="catalog-section__link"
-                        style="background-image: url('{% static '/img/men.webp' %}');">
+                        style="background-image: url('{% static 'dist/img/men.webp' %}');">
                         <div class="catalog-section__name">Men</div>
                         <div class="catalog-section__description">Fashion clothes for men</div>
                     </a>
                 </div>
                 <div class="catalog-section__col">
                     <a href="/catalog/women" class="catalog-section__link"
-                        style="background-image: url('{% static '/img/women.webp' %}');">
+                        style="background-image: url('{% static 'dist/img/women.webp' %}');">
                         <div class="catalog-section__name">Women</div>
                         <div class="catalog-section__description">Fashion clothes for women</div>
                     </a>
@@ -133,7 +131,7 @@
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">
-                                    <img class="product-card__picture" src="./img/product.png" alt="test1">
+                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
                                 </div>
                                 <div class="product-card__info">
                                     <div class="product-card__name">test1</div>
@@ -144,7 +142,7 @@
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">
-                                    <img class="product-card__picture" src="./img/product.png" alt="test1">
+                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
                                 </div>
                                 <div class="product-card__info">
                                     <div class="product-card__name">test1</div>
@@ -155,7 +153,7 @@
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">
-                                    <img class="product-card__picture" src="./img/product.png" alt="test1">
+                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
                                 </div>
                                 <div class="product-card__info">
                                     <div class="product-card__name">test1</div>
@@ -166,7 +164,7 @@
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">
-                                    <img class="product-card__picture" src="./img/product.png" alt="test1">
+                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
                                 </div>
                                 <div class="product-card__info">
                                     <div class="product-card__name">test1</div>
@@ -177,7 +175,7 @@
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">
-                                    <img class="product-card__picture" src="./img/product.png" alt="test1">
+                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
                                 </div>
                                 <div class="product-card__info">
                                     <div class="product-card__name">test1</div>
@@ -213,7 +211,7 @@
         <div class="container">
             <div class="footer__content">
                 <a href="/" class="footer__logo">
-                    <img src="{% static '/img/logo.svg' %}" alt="WGStore Logo">
+                    <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
                 </a>
                 <p class="footer__description">@WGStore все правава защищены</p>
             </div>
