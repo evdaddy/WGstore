@@ -1027,14 +1027,14 @@ p {
   margin: 0 auto 20px;
 }
 .profile .form-control {
+  background-color: #f5f5f5;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
   color: #000;
-  border-color: #000;
-}
-.profile .form-control[type=number] {
-  border-bottom: 0;
-  background: #f8f9fa;
-  -webkit-box-shadow: 7px 7px 18px #cecfd0, -7px -7px 18px #ffffff;
-  box-shadow: 7px 7px 18px #cecfd0, -7px -7px 18px #ffffff;
+  -webkit-box-shadow: 0 0.4rem #dfd9d9;
+  box-shadow: 0 0.4rem #dfd9d9;
 }
 .profile .form-label {
   color: #000;
