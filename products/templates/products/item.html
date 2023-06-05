@@ -9,36 +9,45 @@
   <title>WGStore</title>
   <link href="{% static '/dist/fonts/Roboto-Regular.woff2' %}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{% static '/dist/css/vendor.css' %}">
-  <link rel="stylesheet" href="{% static '/static/dist/css/main.css' %}">
+  <link rel="stylesheet" href="{% static '/dist/css/main.css' %}">
   <script defer src="{% static '/dist/js/main.js' %}"></script>
 </head>
 
-<body>
+<body class="item__body">
 
-  <header class="header">
+  <header class="header -bg">
 
   <div class="container">
 
     <div class="header__row">
-        <a href="/static" class="header__link btn btn-primary">Catalog</a>
-        <a href="/static" class="header__logo">
+        <a href="{% url 'products:index' %}" class="header__link btn btn-primary">Catalog</a>
+        <a href="{% url 'index' %}" class="header__logo">
           <img src="{% static '/dist/img/logo.svg' %}" alt="WGStore Logo">
         </a>
-        <a href="/static" class="header__link btn btn-primary">Profile</a>
+        <a href="{% url 'users:profile' %}" class="header__link btn btn-primary">Profile</a>
     </div>
   </div>
 </header>
 
-    <div class="product-page">
+    <div class="item">
         <div class="container">
-            <div class="product-page__row">
-                <div class="product-page__image">
-                    <img src="" alt="Продукт">
+            <div class="item__row">
+                <div class="item__image">
+                    <img src="{{ product.image.url }}" alt="Продукт">
                 </div>
-                <div class="product-page__info">
-                    <div class="product-page__name"></div>
-                    <div class="product-page__description"></div>
-                    <div class="product-page__price"></div>
+                <div class="item__info">
+                    <div class="item__name">{{ product.name }}</div>
+                    <div class="item__description">{{ product.description }}</div>
+                    <div class="item__price">{{ product.price }}</div>
+                     <div class="item__options">
+                        <div class="item-options__param"><span>Ваш регион:</span> Москва</div>
+                        <div class="item-options__param"><span>Доставка:</span> 6 июня</div>
+                        <div class="item-options__param"><span>Цвет:</span> черный</div>
+                        <div class="item-options__param"><span>Состав:</span> верх: 50% полиуретан, 50% вискоза</div>
+                    </div>
+                    <div class="item__button">
+                        <a class="btn btn-last" href="{% url 'products:basket_add' product.id %}">Отправить в корзину</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,7 +56,7 @@
     <footer class="footer">
     <div class="container">
         <div class="footer__content">
-            <a href="/static" class="footer__logo">
+            <a href="{% url 'index' %}" class="footer__logo">
                 <img src="{% static '/dist/img/logo.svg' %}" alt="WGStore Logo">
             </a>
             <p class="footer__description">@WGStore все правава защищены</p>
