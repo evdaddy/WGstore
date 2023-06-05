@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="{% static 'dist/favicon.ico' %}" type="image/x-icon">
     <title>WGStore - Профиль</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'vendor/js/nice-select2.js' %}"></script>
+    <link href="{% static 'vendor/css/nice-select2.css' %}" rel="stylesheet">
 
     <link href="{% static 'dist/fonts/Roboto-Regular.woff2' %}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{% static 'dist/css/vendor.css' %}">
@@ -18,53 +21,6 @@
     <script defer src="{% static 'dist/js/main.js' %}"></script>
 </head>
 <body>
-<!-- Navigation -->
-{#<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">#}
-{#    <div class="container">#}
-{#        <a class="navbar-brand" href="{% url 'index' %}">Store</a>#}
-{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"#}
-{#                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">#}
-{#            <span class="navbar-toggler-icon"></span>#}
-{#        </button>#}
-{#        <div class="collapse navbar-collapse" id="navbarResponsive">#}
-{#            <ul class="navbar-nav ml-auto">#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="{% url 'products:index' %}">Каталог <i class="fas fa-shopping-bag"></i> </a>#}
-{#                </li>#}
-{#                {% if user.is_authenticated %}#}
-{#                <li class="nav-item dropdown">#}
-{#                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"#}
-{#                       data-bs-toggle="dropdown" aria-expanded="false">#}
-{#                        <i class="fas fa-user-circle"></i>#}
-{#                    </a>#}
-{#                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">#}
-{#                        <li>#}
-{#                            <a class="dropdown-item" href="{% url 'users:profile' %}">Профиль</a>#}
-{#                        </li>#}
-{#                        <li><a class="dropdown-item" href="{% url 'users:profile' %}">Заказы</a></li>#}
-{#                        {% if user.is_superuser or user.is_stuff %}#}
-{#                        <li><a class="dropdown-item" href="#">Админ-панель</a></li>#}
-{#                        {% endif %}#}
-{#                        <li>#}
-{#                            <hr class="dropdown-divider">#}
-{#                        </li>#}
-{#                        <li>#}
-{#                            <a class="dropdown-item" href="{% url 'users:logout' %}">#}
-{#                                Выйти#}
-{#                            </a>#}
-{#                        </li>#}
-{#                    </ul>#}
-{#                </li>#}
-{##}
-{#                {% else %}#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="{% url 'users:login' %}">Войти <i class="fas fa-sign-in-alt"></i></a>#}
-{#                </li>#}
-{#                {% endif %}#}
-{#            </ul>#}
-{#        </div>#}
-{#    </div>#}
-{#</nav>#}
 {% include 'products/header.html' %}
 <div class="profile">
     <div class="container">

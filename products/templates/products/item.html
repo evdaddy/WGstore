@@ -8,6 +8,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WGStore</title>
   <link href="{% static '/dist/fonts/Roboto-Regular.woff2' %}" as="font" type="font/woff2" crossorigin>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+
   <link rel="stylesheet" href="{% static '/dist/css/vendor.css' %}">
   <link rel="stylesheet" href="{% static '/dist/css/main.css' %}">
   <script defer src="{% static '/dist/js/main.js' %}"></script>
@@ -15,19 +19,7 @@
 
 <body class="item__body">
 
-  <header class="header -bg">
-
-  <div class="container">
-
-    <div class="header__row">
-        <a href="{% url 'products:index' %}" class="header__link btn btn-primary">Catalog</a>
-        <a href="{% url 'index' %}" class="header__logo">
-          <img src="{% static '/dist/img/logo.svg' %}" alt="WGStore Logo">
-        </a>
-        <a href="{% url 'users:profile' %}" class="header__link btn btn-primary">Profile</a>
-    </div>
-  </div>
-</header>
+  {% include 'products/header.html' %}
 
     <div class="item">
         <div class="container">
@@ -91,6 +83,16 @@
         </div>
     </template>
 </div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+
+<!-- FontAwesome script -->
+<script src="{% static 'vendor/fontawesome/fontawesome-icons.js' %}" crossorigin="anonymous"></script>
 </body>
 
 </html>

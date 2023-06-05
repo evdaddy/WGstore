@@ -1,35 +1,34 @@
 {% load static %}
 
 <header class="header -bg">
-        <div class="container">
-            <div class="header__row">
-                <a href="{% url 'products:index' %}" class="header__link btn btn-primary">Catalog</a>
-                <a href="/" class="header__logo">
-                    <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
+    <div class="container">
+        <div class="header__row">
+            <a href="{% url 'products:index' %}" class="header__link btn btn-primary">Catalog</a>
+            <a href="/" class="header__logo">
+                <img src="{% static 'dist/img/logo.svg' %}" alt="WGStore Logo">
+            </a>
+            <div class="btn-primary nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
                 </a>
-                <div class="btn-primary nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{% url 'users:profile' %}">Profile</a>
-                        </li>
-                        <li><a class="dropdown-item" href="{% url 'users:profile' %}">Orders</a></li>
-                        {% if user.is_superuser or user.is_stuff %}
-                            <li><a class="dropdown-item" href="#">Admin-panel</a></li>
-                        {% endif %}
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        {% if user.is_superuser or user.is_stuff %}
-                            <li><a class="dropdown-item" href="{% url 'users:logout'%}">Exit</a></li>
-                        {% else %}
-                            <li><a class="dropdown-item" href="{% url 'users:login' %}">Login</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                        <a class="dropdown-item" href="{% url 'users:profile' %}">Profile</a>
+                    </li>
+                    {% if user.is_superuser or user.is_stuff %}
+                        <li><a class="dropdown-item" href="#">Admin-panel</a></li>
+                    {% endif %}
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    {% if user.is_superuser or user.is_stuff %}
+                        <li><a class="dropdown-item" href="{% url 'users:logout'%}">Exit</a></li>
+                    {% else %}
+                        <li><a class="dropdown-item" href="{% url 'users:login' %}">Login</a></li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
-    </header>
+    </div>
+</header>

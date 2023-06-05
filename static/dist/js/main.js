@@ -85,6 +85,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind("[data-fancybox]");
+  if (document.querySelectorAll('select').length > 0) {
+    document.querySelectorAll('select').forEach(select => NiceSelect.bind(select));
+  }
+
   // Countdown
   const countdownEl = document.querySelector('[data-countdown]');
   if (countdownEl) {
