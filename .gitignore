@@ -9,3 +9,4 @@ __pycache__
 /make.bat
 /source
 node_modules
+db.sqlite3
