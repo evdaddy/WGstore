@@ -35,7 +35,7 @@
 
     <div class="stock" id="stock">
         <div class="container">
-            <div class="stock__row">
+            <div class="stock__row" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="800">
                 <div class="stock__content">Special offer from <i>WGStore</i>, have time to buy!<br> 
                     There is still until the end of the promotion:</div>
                 <div class="stock__countdown" data-countdown="5.5">
@@ -64,7 +64,7 @@
         <div class="preview__row">
             <div class="preview__block" style="background-image: url('{% static 'dist/img/preview1.webp' %}');">
                 <div class="preview__container">
-                    <div class="preview__content">
+                    <div class="preview__content" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
                         <h2 class="title">Eiger Extreme</h2>
                         <p class="description">For living life on the edge. For experiencing all the extremes. For
                             limits there to be pushed. When your equipment must be function-first, Eiger Extreme is made
@@ -80,14 +80,14 @@
     <div class="catalog-section">
         <div class="container">
             <div class="catalog-section__row">
-                <div class="catalog-section__col">
+                <div class="catalog-section__col" data-aos="fade-left" data-aos-delay="200" data-aos-duration="800">
                     <a href="{% url 'products:index' %}" class="catalog-section__link"
                         style="background-image: url('{% static 'dist/img/men.webp' %}');">
                         <div class="catalog-section__name">Men</div>
                         <div class="catalog-section__description">Fashion clothes for men</div>
                     </a>
                 </div>
-                <div class="catalog-section__col">
+                <div class="catalog-section__col" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                     <a href="{% url 'products:index' %}" class="catalog-section__link"
                         style="background-image: url('{% static 'dist/img/women.webp' %}');">
                         <div class="catalog-section__name">Women</div>
@@ -139,7 +139,7 @@
                                     <span class="product-card__price">{{ product.price }}р</span>
                                 </div>
                                 <div class="product-card__buttons">
-                                    <a type="button" class="btn btn-outline" href="{% url 'products:basket_add' product.id %}">Отправить в корзину</a>
+                                    <a type="button" class="btn btn-outline w-100" style="text-align: center;" href="{% url 'products:basket_add' product.id %}">Отправить в корзину</a>
                                 </div>
                             </div>
                         </div>
