@@ -71,7 +71,7 @@
                 {% for product in products %}
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="product-card">
-                        <a href="#" class="product-card__top">
+                        <a href="{% url 'products:item_page' product.id %}" class="product-card__top">
                             <img class="product-card__picture" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         <div class="product-card__info">

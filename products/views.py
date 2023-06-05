@@ -11,7 +11,6 @@ def index(request):
 
 
 def products(request, category_id=None, page_number=1):
-
     products = Product.objects.filter(category_id=category_id) if category_id else Product.objects.all()
     paginator = Paginator(products, per_page=4)
     products_paginator = paginator.page(page_number)
@@ -23,11 +22,12 @@ def products(request, category_id=None, page_number=1):
     return render(request, 'products/products.html', context=context)
 
 
-def item_page(request, item_id):
-    item = Product.objects.get(id=item_id)
-    context = {'products': item,
+def item(request, product_number):
+    item = Product.objects.get(id=product_number)
+    context = {
+        'product': item,
     }
-    return render(request, 'products/item_page', context=context)
+    return render(request, 'products/item.html', context=context)
 
 @login_required
 def basket_add(request, product_id):
