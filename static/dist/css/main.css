@@ -242,6 +242,30 @@ p {
   -o-transition: all 150ms linear;
   transition: all 150ms linear;
 }
+.form-label-image {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  background-color: #23293C;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.form-label-image svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.form-label-image + input {
+  display: none;
+}
 .form-text-help {
   color: #ff001f;
   margin-top: 5px;
@@ -447,7 +471,6 @@ p {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -689,7 +712,7 @@ p {
 
 .footer {
   background-color: #000;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 .footer__content {
   display: -webkit-box;
@@ -708,7 +731,7 @@ p {
 }
 .footer__logo {
   display: block;
-  width: 250px;
+  width: 175px;
 }
 .footer__logo img {
   width: 100%;
@@ -717,7 +740,7 @@ p {
 .footer__description {
   color: #fff;
   margin-top: 40px;
-  font-size: 12px;
+  font-size: 9px;
   text-align: center;
 }
 
@@ -1156,5 +1179,60 @@ p {
 }
 .profile .form-label {
   color: #000;
+}
+
+.item {
+  margin-top: 95px;
+  margin-bottom: 50px;
+  padding-top: 40px;
+}
+.item__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+}
+.item__body .footer {
+  margin-top: auto;
+}
+.item__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.item__image {
+  width: calc(50% - 20px);
+  min-width: calc(50% - 20px);
+  margin-right: 20px;
+  max-height: 300px;
+}
+.item__image img {
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.item__name {
+  color: #23293C;
+}
+.item__description {
+  margin-bottom: 20px;
+  color: #23293C;
+}
+.item__price {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #23293C;
+}
+.item__options {
+  margin-bottom: 40px;
+}
+.item-options__param span {
+  font-weight: 700;
+  margin-right: 5px;
 }
 /*# sourceMappingURL=main.css.map */
