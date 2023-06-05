@@ -8,9 +8,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WGStore</title>
   <link href="{% static '/dist/fonts/Roboto-Regular.woff2' %}" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../../../static/dist/css/vendor.css">
-  <link rel="stylesheet" href="../../../static/dist/css/main.css">
-  <script defer src="../../../static/dist/js/main.js"></script>
+  <link rel="stylesheet" href="{% static '/dist/css/vendor.css' %}">
+  <link rel="stylesheet" href="{% static '/static/dist/css/main.css' %}">
+  <script defer src="{% static '/dist/js/main.js' %}"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <div class="header__row">
         <a href="/static" class="header__link btn btn-primary">Catalog</a>
         <a href="/static" class="header__logo">
-          <img src="../../../static/dist/img/logo.svg" alt="WGStore Logo">
+          <img src="{% static '/dist/img/logo.svg' %}" alt="WGStore Logo">
         </a>
         <a href="/static" class="header__link btn btn-primary">Profile</a>
     </div>
@@ -48,7 +48,7 @@
     <div class="container">
         <div class="footer__content">
             <a href="/static" class="footer__logo">
-                <img src="../../../static/dist/img/logo.svg" alt="WGStore Logo">
+                <img src="{% static '/dist/img/logo.svg' %}" alt="WGStore Logo">
             </a>
             <p class="footer__description">@WGStore все правава защищены</p>
         </div>
