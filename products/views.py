@@ -23,6 +23,12 @@ def products(request, category_id=None, page_number=1):
     return render(request, 'products/products.html', context=context)
 
 
+def item_page(request, item_id):
+    item = Product.objects.get(id=item_id)
+    context = {'products': item,
+    }
+    return render(request, 'products/item_page', context=context)
+
 @login_required
 def basket_add(request, product_id):
     product = Product.objects.get(id=product_id)
