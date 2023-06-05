@@ -132,62 +132,18 @@
                         <div class="swiper-slide">
                             <div class="product-card">
                                 <div class="product-card__top">
-                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
+                                    <img class="product-card__picture" src="{{ product.image.url }}" alt="test1">
                                 </div>
                                 <div class="product-card__info">
-                                    <div class="product-card__name">test1</div>
-                                    <span class="product-card__price">900 000р</span>
+                                    <div class="product-card__name">{{ product.name }}</div>
+                                    <span class="product-card__price">{{ product.price }}р</span>
                                 </div>
                                 <div class="product-card__buttons">
-                                    <button type="button" class="btn btn-outline">Отправить в корзину</button>
+                                    <a type="button" class="btn btn-outline" href="{% url 'products:basket_add' product.id %}">Отправить в корзину</a>
                                 </div>
                             </div>
                         </div>
                         {% endfor %}
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-card__top">
-                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__name">test1</div>
-                                    <span class="product-card__price">900 000р</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-card__top">
-                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__name">test1</div>
-                                    <span class="product-card__price">900 000р</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-card__top">
-                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__name">test1</div>
-                                    <span class="product-card__price">900 000р</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-card__top">
-                                    <img class="product-card__picture" src="{% static 'dist/img/product.png' %}" alt="test1">
-                                </div>
-                                <div class="product-card__info">
-                                    <div class="product-card__name">test1</div>
-                                    <span class="product-card__price">900 000р</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
